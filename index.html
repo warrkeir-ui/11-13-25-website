@@ -1,1209 +1,1401 @@
 <!doctype html>
 <html lang="en">
- <head>
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hakuna Matatah Preschool &amp; Childcare Center</title>
   <script src="/_sdk/element_sdk.js"></script>
+
   <style>
-        body {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Comic Sans MS', cursive, sans-serif;
-            background: linear-gradient(135deg, #2d5016 0%, #4a7c59 50%, #2d5016 100%);
-            min-height: 100%;
-            color: #2d4a22;
-        }
+    :root {
+      --jungle-green: #1b5e20;
+      --jungle-light: #4caf50;
+      --jungle-accent: #ffb300;
+      --jungle-orange: #ff6b35;
+      --card-border: #ffd54f;
+    }
 
-        html {
-            height: 100%;
-        }
+    * {
+      box-sizing: border-box;
+    }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background:
+        radial-gradient(circle at 0% 0%, rgba(255, 235, 59, 0.25), transparent 60%),
+        radial-gradient(circle at 100% 0%, rgba(255, 152, 0, 0.25), transparent 60%),
+        radial-gradient(circle at 0% 100%, rgba(76, 175, 80, 0.25), transparent 60%),
+        radial-gradient(circle at 100% 100%, rgba(0, 150, 136, 0.25), transparent 60%),
+        linear-gradient(135deg, #043019 0%, #105d3a 45%, #0b4027 100%);
+      min-height: 100%;
+      color: #143016;
+    }
 
-        /* Header Styles */
-        .header {
-            background: linear-gradient(45deg, #8fbc8f, #228b22);
-            padding: 20px 0;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-            position: relative;
-            overflow: hidden;
-        }
+    html {
+      height: 100%;
+    }
 
-        .header::before {
-            content: '🌿🦁🌿🐒🌿🦜🌿';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            font-size: 24px;
-            text-align: center;
-            opacity: 0.3;
-            animation: float 6s ease-in-out infinite;
-        }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-        }
+    /* Header */
+    .header {
+      background: linear-gradient(45deg, #43a047, #8bc34a, #ffb300);
+      padding: 20px 0 16px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+      position: relative;
+      overflow: hidden;
+    }
 
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: relative;
-            z-index: 2;
-        }
+    .header::before {
+      content: '🌿🦁🌴🦜🍃🐒🌺';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      font-size: 22px;
+      text-align: center;
+      opacity: 0.35;
+      animation: float 6s ease-in-out infinite;
+    }
 
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
 
-        .logo-icon {
-            font-size: 48px;
-            animation: bounce 2s infinite;
-        }
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+      gap: 20px;
+    }
 
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-            40% { transform: translateY(-10px); }
-            60% { transform: translateY(-5px); }
-        }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
 
-        .logo-text h1 {
-            margin: 0;
-            font-size: 28px;
-            color: #fff;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
+    .logo-icon {
+      font-size: 54px;
+      animation: bounce 2s infinite;
+    }
 
-        .logo-text p {
-            margin: 0;
-            font-size: 14px;
-            color: #f0fff0;
-            font-style: italic;
-        }
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+      40% { transform: translateY(-10px); }
+      60% { transform: translateY(-5px); }
+    }
 
-        .nav-menu {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
+    .logo-text h1 {
+      margin: 0;
+      font-size: 28px;
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
 
-        .nav-btn {
-            background: #ff6b35;
-            color: white;
-            border: none;
-            padding: 12px 20px;
-            border-radius: 25px;
-            cursor: pointer;
-            font-family: inherit;
-            font-weight: bold;
-            font-size: 14px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        }
+    .logo-text p {
+      margin: 2px 0 0;
+      font-size: 14px;
+      color: #fffde7;
+      font-style: italic;
+    }
 
-        .nav-btn:hover, .nav-btn.active {
-            background: #e55a2b;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
-        }
+    .nav-menu {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
 
-        /* Main Content */
-        .main-content {
-            padding: 40px 0;
-            min-height: 60%;
-        }
+    .nav-btn {
+      background: var(--jungle-orange);
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-family: inherit;
+      font-weight: bold;
+      font-size: 13px;
+      transition: all 0.25s ease;
+      box-shadow: 0 3px 7px rgba(0,0,0,0.25);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
 
-        .page {
-            display: none;
-            animation: fadeIn 0.5s ease-in;
-        }
+    .nav-btn:hover,
+    .nav-btn.active {
+      background: #e55826;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.35);
+    }
 
-        .page.active {
-            display: block;
-        }
+    /* Main Content */
+    .main-content {
+      padding: 40px 0;
+      min-height: 60%;
+    }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+    .page {
+      display: none;
+      animation: fadeIn 0.5s ease-in;
+    }
 
-        .page-header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
+    .page.active {
+      display: block;
+    }
 
-        .page-title {
-            font-size: 36px;
-            color: #fff;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-            margin-bottom: 10px;
-        }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
 
-        .page-subtitle {
-            font-size: 18px;
-            color: #f0fff0;
-            margin: 0;
-        }
+    .page-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
 
-        /* Card Styles */
-        .card {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
-            padding: 30px;
-            margin-bottom: 30px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-            border: 3px solid #8fbc8f;
-        }
+    .page-title {
+      font-size: 34px;
+      color: #fffde7;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+      margin-bottom: 6px;
+    }
 
-        .card h3 {
-            color: #2d5016;
-            font-size: 24px;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
+    .page-subtitle {
+      font-size: 17px;
+      color: #e8f5e9;
+      margin: 0;
+    }
 
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-bottom: 30px;
-        }
+    /* Cards */
+    .card {
+      background: rgba(255, 255, 255, 0.97);
+      border-radius: 22px;
+      padding: 26px 26px 24px;
+      margin-bottom: 26px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+      border: 3px solid var(--card-border);
+      position: relative;
+      overflow: hidden;
+    }
 
-        /* Director Card */
-        .director-card {
-            text-align: center;
-        }
+    .card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 0 0, rgba(255, 235, 59, 0.12), transparent 55%),
+        radial-gradient(circle at 100% 100%, rgba(129, 199, 132, 0.12), transparent 55%);
+      pointer-events: none;
+    }
 
-        .director-photo {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            background: #fff;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            border: 5px solid #8fbc8f;
-        }
+    .card > * {
+      position: relative;
+      z-index: 1;
+    }
 
-        .director-photo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 50%;
-        }
+    .card h3 {
+      color: var(--jungle-green);
+      font-size: 22px;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
 
-        /* Testimonials */
-        .testimonial {
-            background: #f0fff0;
-            padding: 20px;
-            border-radius: 15px;
-            border-left: 5px solid #ff6b35;
-            margin-bottom: 20px;
-        }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 26px;
+      margin-bottom: 10px;
+    }
 
-        .testimonial-author {
-            font-weight: bold;
-            color: #2d5016;
-            margin-top: 10px;
-        }
+    /* Director Card */
+    .director-card {
+      text-align: center;
+    }
 
-        /* Staff Grid */
-        .staff-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-        }
+    .director-photo {
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+      border: 5px solid var(--card-border);
+      overflow: hidden;
+      margin: 0 auto 16px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+      background: #c8e6c9;
+    }
 
-        .staff-member {
-            text-align: center;
-            background: rgba(255, 255, 255, 0.9);
-            padding: 20px;
-            border-radius: 15px;
-            border: 2px solid #8fbc8f;
-        }
+    .director-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
 
-        .staff-photo {
-            width: 110px;
-            height: 110px;
-            border-radius: 50%;
-            overflow: hidden;
-            margin: 0 auto 15px;
-            background: #fff;
-        }
+    /* School photo */
+    .school-photo {
+      width: 100%;
+      height: 220px;
+      border-radius: 18px;
+      overflow: hidden;
+      margin-bottom: 14px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.35);
+      background: #a5d6a7;
+    }
 
-        .staff-photo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 50%;
-        }
+    .school-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
 
-        /* Qualifications */
-        .qualification-item {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            padding: 15px;
-            background: #f0fff0;
-            border-radius: 10px;
-            margin-bottom: 15px;
-        }
+    /* Testimonials */
+    .testimonial {
+      background: #f1f8e9;
+      padding: 16px 18px;
+      border-radius: 14px;
+      border-left: 5px solid var(--jungle-orange);
+      margin-bottom: 14px;
+      font-size: 15px;
+    }
 
-        .qualification-icon {
-            font-size: 24px;
-            width: 40px;
-            text-align: center;
-        }
+    .testimonial-author {
+      font-weight: bold;
+      color: #2d5016;
+      margin-top: 8px;
+    }
 
-        /* Schedule Table */
-        .schedule-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
+    /* Staff */
+    .staff-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 22px;
+    }
 
-        .schedule-table th,
-        .schedule-table td {
-            padding: 12px;
-            text-align: left;
-            border-bottom: 2px solid #8fbc8f;
-        }
+    .staff-member {
+      text-align: center;
+      background: rgba(255, 255, 255, 0.94);
+      padding: 18px 16px 18px;
+      border-radius: 18px;
+      border: 2px solid #c5e1a5;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
 
-        .schedule-table th {
-            background: #2d5016;
-            color: white;
-            font-weight: bold;
-        }
+    .staff-photo {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: 0 auto 10px;
+      border: 4px solid var(--card-border);
+      background: #e8f5e9;
+      box-shadow: 0 5px 14px rgba(0,0,0,0.3);
+    }
 
-        .schedule-table tr:nth-child(even) {
-            background: #f0fff0;
-        }
+    .staff-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
 
-        /* Gallery */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-        }
+    .staff-member h4 {
+      margin: 6px 0 2px;
+      color: var(--jungle-green);
+    }
 
-        .gallery-item {
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 15px;
-            padding: 20px;
-            text-align: center;
-            border: 2px solid #8fbc8f;
-        }
+    .staff-member p {
+      margin: 3px 0;
+      font-size: 14px;
+    }
 
-        .gallery-photo {
-            width: 100%;
-            height: 150px;
-            border-radius: 10px;
-            margin-bottom: 15px;
-            overflow: hidden;
-            background: linear-gradient(45deg, #ff6b35, #f7931e);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 48px;
-        }
+    /* Qualifications */
+    .qualification-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 14px;
+      background: #f1f8e9;
+      border-radius: 12px;
+      margin-bottom: 12px;
+      border: 1px solid #c5e1a5;
+    }
 
-        .gallery-photo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+    .qualification-icon {
+      font-size: 24px;
+      width: 40px;
+      text-align: center;
+    }
 
-        /* Forms */
-        .form-group {
-            margin-bottom: 20px;
-        }
+    /* Schedule Table */
+    .schedule-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      font-size: 14px;
+    }
 
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-            color: #2d5016;
-        }
+    .schedule-table th,
+    .schedule-table td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 2px solid #c5e1a5;
+    }
 
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
-            width: 100%;
-            padding: 12px;
-            border: 2px solid #8fbc8f;
-            border-radius: 10px;
-            font-family: inherit;
-            font-size: 16px;
-        }
+    .schedule-table th {
+      background: var(--jungle-green);
+      color: white;
+      font-weight: bold;
+    }
 
-        .form-group textarea {
-            height: 100px;
-            resize: vertical;
-        }
+    .schedule-table tr:nth-child(even) {
+      background: #f9fbe7;
+    }
 
-        .btn {
-            background: #ff6b35;
-            color: white;
-            border: none;
-            padding: 15px 30px;
-            border-radius: 25px;
-            cursor: pointer;
-            font-family: inherit;
-            font-weight: bold;
-            font-size: 16px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        }
+    /* Gallery */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 22px;
+    }
 
-        .btn:hover {
-            background: #e55a2b;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
-        }
+    .gallery-item {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 18px;
+      padding: 16px 14px 16px;
+      text-align: center;
+      border: 2px solid #c5e1a5;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+    }
 
-        .btn-secondary {
-            background: #228b22;
-        }
+    .gallery-photo {
+      width: 100%;
+      height: 170px;
+      border-radius: 14px;
+      overflow: hidden;
+      margin-bottom: 10px;
+      background: #c8e6c9;
+    }
 
-        .btn-secondary:hover {
-            background: #1e7b1e;
-        }
+    .gallery-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
 
-        /* Footer */
-        .footer {
-            background: #2d5016;
-            color: white;
-            text-align: center;
-            padding: 30px 0;
-            margin-top: 50px;
-        }
+    /* Forms & Buttons */
+    .form-group {
+      margin-bottom: 18px;
+    }
 
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-bottom: 20px;
-        }
+    .form-group label {
+      display: block;
+      margin-bottom: 4px;
+      font-weight: bold;
+      color: var(--jungle-green);
+      font-size: 14px;
+    }
 
-        .footer-section h4 {
-            color: #8fbc8f;
-            margin-bottom: 15px;
-        }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 10px 11px;
+      border: 2px solid #c5e1a5;
+      border-radius: 10px;
+      font-family: inherit;
+      font-size: 15px;
+    }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                gap: 20px;
-            }
+    .form-group textarea {
+      height: 100px;
+      resize: vertical;
+    }
 
-            .nav-menu {
-                justify-content: center;
-            }
+    .btn {
+      background: var(--jungle-orange);
+      color: white;
+      border: none;
+      padding: 12px 26px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-family: inherit;
+      font-weight: bold;
+      font-size: 15px;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 9px rgba(0,0,0,0.25);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
 
-            .nav-btn {
-                padding: 10px 15px;
-                font-size: 12px;
-            }
+    .btn:hover {
+      background: #e55826;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 13px rgba(0,0,0,0.35);
+    }
 
-            .page-title {
-                font-size: 28px;
-            }
+    .btn-secondary {
+      background: var(--jungle-green);
+    }
 
-            .logo-text h1 {
-                font-size: 24px;
-            }
+    .btn-secondary:hover {
+      background: #10451d;
+    }
 
-            .grid {
-                grid-template-columns: 1fr;
-            }
-        }
+    .success-message {
+      background: #d4edda;
+      color: #155724;
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid #c3e6cb;
+      margin-top: 14px;
+      display: none;
+      font-size: 14px;
+    }
 
-        .success-message {
-            background: #d4edda;
-            color: #155724;
-            padding: 15px;
-            border-radius: 10px;
-            border: 1px solid #c3e6cb;
-            margin-bottom: 20px;
-            display: none;
-        }
+    .download-link {
+      display: inline-block;
+      background: var(--jungle-green);
+      color: white;
+      padding: 12px 22px;
+      text-decoration: none;
+      border-radius: 999px;
+      font-weight: bold;
+      margin: 10px 0 16px;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 9px rgba(0,0,0,0.25);
+      font-size: 14px;
+    }
 
-        .download-link {
-            display: inline-block;
-            background: #228b22;
-            color: white;
-            padding: 15px 25px;
-            text-decoration: none;
-            border-radius: 10px;
-            font-weight: bold;
-            margin: 10px 0;
-            transition: all 0.3s ease;
-        }
+    .download-link:hover {
+      background: #10451d;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 13px rgba(0,0,0,0.35);
+    }
 
-        .download-link:hover {
-            background: #1e7b1e;
-            transform: translateY(-2px);
-        }
-    </style>
+    /* Footer */
+    .footer {
+      background: #022012;
+      color: white;
+      text-align: center;
+      padding: 26px 0;
+      margin-top: 40px;
+      border-top: 4px solid #33691e;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 26px;
+      margin-bottom: 16px;
+    }
+
+    .footer-section h4 {
+      color: #c5e1a5;
+      margin-bottom: 10px;
+    }
+
+    .footer-section p {
+      margin: 3px 0;
+      font-size: 14px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-menu {
+        justify-content: flex-start;
+      }
+
+      .page-title {
+        font-size: 26px;
+      }
+
+      .logo-text h1 {
+        font-size: 22px;
+      }
+    }
+  </style>
+
   <style>@view-transition { navigation: auto; }</style>
   <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
   <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
- </head>
- <body>
+</head>
+
+<body>
   <header class="header">
-   <div class="container">
-    <div class="header-content">
-     <div class="logo">
-      <div class="logo-icon">
-       🦁
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <div class="logo-icon">🦁</div>
+          <div class="logo-text">
+            <h1 id="school-name">Hakuna Matatah Preschool &amp; Childcare Center</h1>
+            <p id="tagline">Where Learning Feels Like Play!</p>
+          </div>
+        </div>
+
+        <nav class="nav-menu">
+          <button class="nav-btn active" onclick="showPage('home', this)">🏠 Home</button>
+          <button class="nav-btn" onclick="showPage('enrollment', this)">📝 Enrollment</button>
+          <button class="nav-btn" onclick="showPage('staff', this)">👥 Staff</button>
+          <button class="nav-btn" onclick="showPage('classrooms', this)">🎨 Classrooms</button>
+          <button class="nav-btn" onclick="showPage('gallery', this)">📸 Calendar &amp; Gallery</button>
+          <button class="nav-btn" onclick="showPage('contact', this)">📞 Contact</button>
+        </nav>
       </div>
-      <div class="logo-text">
-       <h1 id="school-name">Hakuna Matatah Preschool &amp; Childcare Center</h1>
-       <p id="tagline">“Where Learning and Care Meet”</p>
-      </div>
-     </div>
-     <nav class="nav-menu">
-      <button class="nav-btn active" onclick="showPage('home')">🏠 Home</button>
-      <button class="nav-btn" onclick="showPage('enrollment')">📝 Enrollment</button>
-      <button class="nav-btn" onclick="showPage('staff')">👥 Staff</button>
-      <button class="nav-btn" onclick="showPage('classrooms')">🎨 Classrooms</button>
-      <button class="nav-btn" onclick="showPage('gallery')">📸 Calendar &amp; Gallery</button>
-      <button class="nav-btn" onclick="showPage('contact')">📞 Contact</button>
-     </nav>
     </div>
-   </div>
   </header>
 
   <main class="main-content">
-   <div class="container">
-
-    <!-- Home Page -->
-    <div id="home" class="page active">
-     <div class="page-header">
-      <h2 class="page-title">Welcome to Our Hakuna Matatah Jungle! 🌿</h2>
-      <p class="page-subtitle">Serving families in Redford, Detroit, Southfield, Westland &amp; surrounding areas.</p>
-     </div>
-     <div class="grid">
-      <div class="card director-card">
-       <h3>🌟 Meet Our Owner &amp; Director</h3>
-       <div class="director-photo">
-        <img src="Stefanie.png" alt="Owner &amp; Director Stefanie Boyd">
-       </div>
-       <h4 id="director-name">Stefanie Boyd</h4>
-       <p id="director-bio">
-        Stefanie has been in childcare for over 20 years and opened Hakuna Matatah in 2015.
-        She holds herself and her team to high standards, creating a safe, nurturing, high-quality
-        program where future leaders are built through fun, enriching activities and learning.
-       </p>
-      </div>
-      <div class="card">
-       <h3>🏫 Our Center</h3>
-       <div style="width: 100%; height: 200px; border-radius: 15px; overflow: hidden; margin-bottom: 15px;">
-        <img src="School.png" alt="Hakuna Matatah Preschool &amp; Childcare Center building" style="width:100%;height:100%;object-fit:cover;">
-       </div>
-       <p>
-        Hakuna Matatah Preschool &amp; Childcare Center is conveniently located at
-        26140 W 7 Mile Road, Redford, MI 48240. Our classrooms are bright, welcoming,
-        and designed for hands-on exploration, with a warm, family atmosphere that feels just like home.
-       </p>
-       <p>
-        Our vision is to provide a safe, nurturing learning environment that supports physical, social,
-        emotional, language, and cognitive development—partnering with families to help each child grow.
-       </p>
-      </div>
-     </div>
-     <div class="card">
-      <h3>💬 What Our Families Say</h3>
-      <div class="testimonial">
-       <p>
-        “Hakuna Matatah has been a blessing for our family. The staff truly loves our child and keeps us
-        informed about everything. We see so much growth in her confidence and learning.”
-       </p>
-       <div class="testimonial-author">– Hakuna Matatah Parent</div>
-      </div>
-      <div class="testimonial">
-       <p>
-        “We love the family atmosphere and the flexible hours. Knowing our children are safe, loved,
-        and learning makes drop-off so much easier.”
-       </p>
-       <div class="testimonial-author">– Hakuna Matatah Parent</div>
-      </div>
-      <div class="testimonial">
-       <p>
-        “From infants all the way through after-care, the teachers meet every child where they are and
-        help them grow at their own pace.”
-       </p>
-       <div class="testimonial-author">– Hakuna Matatah Parent</div>
-      </div>
-     </div>
-    </div>
-
-    <!-- Enrollment Page -->
-    <div id="enrollment" class="page">
-     <div class="page-header">
-      <h2 class="page-title">Join Our Hakuna Matatah Family! 🦁</h2>
-      <p class="page-subtitle">Simple enrollment, loving care, and learning through play.</p>
-     </div>
-     <div class="card">
-      <h3>📋 Enrollment Information</h3>
-      <p>
-       Thank you for choosing Hakuna Matatah Preschool &amp; Childcare Center.
-       Our enrollment packet includes our parent contract, fee schedule, Covid-19 plan,
-       discipline policy, photo permission, licensing notices, and required state forms.
-      </p>
-      <a href="Hakuna-Matatah-Enrollment-Packet.pdf" class="download-link" download>
-       📥 Download Full Enrollment Packet (PDF)
-      </a>
-
-      <h4>🔄 Enrollment Process</h4>
-      <ol style="font-size:16px;line-height:1.6;">
-       <li><strong>Schedule a tour</strong> with our director to visit the center.</li>
-       <li><strong>Complete the enrollment packet</strong> and all required forms.</li>
-       <li><strong>Submit documentation</strong> (immunizations/waivers, health forms, ID, etc.).</li>
-       <li><strong>Finalize your schedule &amp; tuition agreement</strong> with the director.</li>
-       <li><strong>Attend your child’s first day</strong> and start their learning journey!</li>
-      </ol>
-
-      <h4>💰 Tuition &amp; Fees</h4>
-      <div class="grid">
-       <div style="background:#f0fff0;padding:20px;border-radius:10px;border-left:5px solid #ff6b35;">
-        <h5>🍼 Infants (1.5 years &amp; under)</h5>
-        <p>
-         <strong>Full-time (5 days):</strong> $275 / week<br>
-         <strong>Drop-in (8 hr day):</strong> $75 / day
-        </p>
-       </div>
-       <div style="background:#f0fff0;padding:20px;border-radius:10px;border-left:5px solid #ff6b35;">
-        <h5>🧸 Toddlers (2.5 years &amp; under)</h5>
-        <p>
-         <strong>Full-time (5 days):</strong> $225 / week<br>
-         <strong>Drop-in (8 hr day):</strong> $60 / day
-        </p>
-       </div>
-       <div style="background:#f0fff0;padding:20px;border-radius:10px;border-left:5px solid #ff6b35;">
-        <h5>🎨 Preschoolers (3 years &amp; older)</h5>
-        <p>
-         <strong>Full-time (5 days):</strong> $200 / week<br>
-         <strong>Drop-in (8 hr day):</strong> $60 / day
-        </p>
-       </div>
-       <div style="background:#f0fff0;padding:20px;border-radius:10px;border-left:5px solid #ff6b35;">
-        <h5>🚌 Before / After-Care &amp; Extended Hours</h5>
-        <p>
-         Extended hours are available for families in need.<br>
-         Please see the director for rates and availability.
-        </p>
-       </div>
-      </div>
-
-      <div style="background:#fff3cd;padding:20px;border-radius:10px;border:1px solid #ffeaa7;margin-top:20px;">
-       <h5>💡 Additional Details</h5>
-       <ul>
-        <li>Tuition is due each Monday at the start of the week.</li>
-        <li>Late fees apply if tuition is not received on time as outlined in the contract.</li>
-        <li>Registration fee: $60 (waived when a contract is signed after the tour).</li>
-        <li>DHS (CDC) families are welcome; parents are responsible for copays.</li>
-        <li>Hours of operation: <strong>Monday–Friday, 5:00 a.m. – 6:00 p.m.</strong></li>
-       </ul>
-      </div>
-     </div>
-    </div>
-
-    <!-- Staff Page -->
-    <div id="staff" class="page">
-     <div class="page-header">
-      <h2 class="page-title">Our Amazing Hakuna Matatah Team 👥</h2>
-      <p class="page-subtitle">Loving, qualified caregivers who treat children like family.</p>
-     </div>
-     <div class="card">
-      <h3>✅ Our Qualifications</h3>
-      <div class="grid">
-       <div class="qualification-item">
-        <div class="qualification-icon">📜</div>
-        <div>
-         <h4>Licensed &amp; Certified</h4>
-         <p>
-          All staff meet Michigan state licensing requirements and maintain current early childhood training.
-         </p>
+    <div class="container">
+      <!-- Home Page -->
+      <div id="home" class="page active">
+        <div class="page-header">
+          <h2 class="page-title">Welcome to Our Jungle Adventure! 🌿</h2>
+          <p class="page-subtitle">A warm, nurturing space where children learn, play, and grow together.</p>
         </div>
-       </div>
-       <div class="qualification-item">
-        <div class="qualification-icon">🔍</div>
-        <div>
-         <h4>Background Checked</h4>
-         <p>
-          Comprehensive background screenings help keep every child safe and secure while in our care.
-         </p>
-        </div>
-       </div>
-       <div class="qualification-item">
-        <div class="qualification-icon">🚑</div>
-        <div>
-         <h4>CPR &amp; First Aid</h4>
-         <p>
-          All staff maintain current CPR and First Aid certifications and follow our health &amp; safety procedures.
-         </p>
-        </div>
-       </div>
-       <div class="qualification-item">
-        <div class="qualification-icon">📚</div>
-        <div>
-         <h4>Ongoing Training</h4>
-         <p>
-          Regular professional development keeps our team up-to-date on best practices in early childhood education.
-         </p>
-        </div>
-       </div>
-      </div>
-     </div>
 
-     <div class="card">
-      <h3>👨‍👩‍👧‍👦 Meet Our Staff</h3>
-      <div class="staff-grid">
-       <div class="staff-member">
-        <div class="staff-photo">
-         <img src="Stefanie.png" alt="Owner/Director Stefanie Boyd">
-        </div>
-        <h4>Stefanie Boyd</h4>
-        <p><strong>Owner &amp; Director</strong></p>
-        <p>
-         Over 20 years of childcare experience. CDA, CPR certified. Passionate about creating a loving,
-         structured environment where children thrive.
-        </p>
-       </div>
-
-       <div class="staff-member">
-        <div class="staff-photo">
-         <img src="Kennedy.png" alt="Infant Lead Teacher Kennedy Warr">
-        </div>
-        <h4>Kennedy Warr</h4>
-        <p><strong>Infant Room Lead Teacher</strong></p>
-        <p>
-         4 years of experience with our youngest learners. CPR certified and currently working on
-         an Associate’s Degree in Childcare.
-        </p>
-       </div>
-
-       <div class="staff-member">
-        <div class="staff-photo">
-         <img src="Heaven.png" alt="Infant Co-Teacher Heaven Harris">
-        </div>
-        <h4>Heaven Harris</h4>
-        <p><strong>Infant Room Co-Teacher</strong></p>
-        <p>
-         4 years of experience supporting our infant program. CPR certified and working toward her CDA.
-        </p>
-       </div>
-
-       <div class="staff-member">
-        <div class="staff-photo">
-         <img src="Kathy.png" alt="Toddler Lead Teacher Kathy Bailey">
-        </div>
-        <h4>Kathy Bailey</h4>
-        <p><strong>Toddler Room Lead Teacher</strong></p>
-        <p>
-         Over 10 years of experience. CPR certified. Loves helping busy toddlers learn to express themselves,
-         share, and explore safely.
-        </p>
-       </div>
-
-       <div class="staff-member">
-        <div class="staff-photo">
-         <img src="Keir.png" alt="Preschool Lead Teacher Keir Warr">
-        </div>
-        <h4>Keir Warr</h4>
-        <p><strong>Preschool Lead Teacher</strong></p>
-        <p>
-         5 years of experience, CDA and CPR certified, currently finishing an Associate’s Degree in Childcare.
-         Focused on kindergarten readiness through play-based learning.
-        </p>
-       </div>
-      </div>
-     </div>
-    </div>
-
-    <!-- Classrooms Page -->
-    <div id="classrooms" class="page">
-     <div class="page-header">
-      <h2 class="page-title">Our Simba, Timon, Pumba &amp; Zazu Classrooms 🎨</h2>
-      <p class="page-subtitle">Play-based learning from infants through school-age.</p>
-     </div>
-
-     <div class="grid">
-      <div class="card">
-       <h3>🍼 SIMBA &amp; TIMON: Infant &amp; Toddler Learning Journey (Under 33 Months)</h3>
-       <p>
-        Our littlest explorers learn through play, cuddles, and consistent routines. Curriculum includes
-        early ASL signs, colors, shapes, numbers 1-10, and social-emotional skills through songs, stories,
-        and sensory experiences.
-       </p>
-       <h4>Daily Adventure (8:00 a.m. – 6:00 p.m.)</h4>
-       <table class="schedule-table">
-        <tbody>
-         <tr><th>Time</th><th>Activity</th></tr>
-         <tr><td>8:00 – 8:30</td><td>Arrival, gentle welcome, quiet play &amp; diaper/potty check</td></tr>
-         <tr><td>8:30 – 9:00</td><td>Breakfast</td></tr>
-         <tr><td>9:00 – 9:30</td><td>Diaper change &amp; potty practice</td></tr>
-         <tr><td>9:30 – 10:15</td><td>Circle time &amp; lesson (sensory, colors, shapes, early language)</td></tr>
-         <tr><td>10:15 – 10:45</td><td>Outdoor/indoor gross motor play</td></tr>
-         <tr><td>10:45 – 11:15</td><td>Snack &amp; water</td></tr>
-         <tr><td>11:15 – 11:45</td><td>Arts, crafts &amp; sensory exploration</td></tr>
-         <tr><td>11:45 – 12:00</td><td>Freshen up &amp; quiet transition</td></tr>
-         <tr><td>12:00 – 12:45</td><td>Lunch</td></tr>
-         <tr><td>12:45 – 1:00</td><td>Nap prep &amp; story time</td></tr>
-         <tr><td>1:00 – 3:00</td><td>Nap / quiet rest</td></tr>
-         <tr><td>3:00 – 3:30</td><td>Wake up &amp; diaper/potty</td></tr>
-         <tr><td>3:30 – 4:00</td><td>Afternoon snack &amp; free play</td></tr>
-         <tr><td>4:00 – 4:45</td><td>Fine-motor &amp; structured play</td></tr>
-         <tr><td>4:45 – 5:15</td><td>Final diaper/potty check &amp; optional outdoor time</td></tr>
-         <tr><td>5:15 – 6:00</td><td>Quiet play &amp; dismissals</td></tr>
-        </tbody>
-       </table>
-      </div>
-
-      <div class="card">
-       <h3>🎨 PUMBA: Preschool Program (Ages 3–5)</h3>
-       <p>
-        Our full-year preschool curriculum builds literacy, math, science, social skills, and independence.
-        Children explore weekly themes (All About Me, animals, community helpers, seasons, etc.) with
-        letters, numbers, shapes, and colors spiraled all year long. Fridays are review days to practice
-        everything learned.
-       </p>
-       <h4>Preschoolers’ Daily Adventure (8:00 a.m. – 6:00 p.m.)</h4>
-       <table class="schedule-table">
-        <tbody>
-         <tr><th>Time</th><th>Activity</th></tr>
-         <tr><td>8:00 – 8:30</td><td>Arrival &amp; quiet free play</td></tr>
-         <tr><td>8:30 – 9:00</td><td>Breakfast</td></tr>
-         <tr><td>9:00 – 9:30</td><td>Morning circle (calendar, weather, songs, story)</td></tr>
-         <tr><td>9:30 – 10:15</td><td>Focused lesson &amp; small-group activities</td></tr>
-         <tr><td>10:15 – 11:00</td><td>Art, sensory &amp; center exploration</td></tr>
-         <tr><td>11:00 – 11:45</td><td>Outdoor play / gross motor time</td></tr>
-         <tr><td>11:45 – 12:15</td><td>Snack &amp; water</td></tr>
-         <tr><td>12:15 – 1:00</td><td>Lunch</td></tr>
-         <tr><td>1:00 – 1:30</td><td>Quiet time &amp; story</td></tr>
-         <tr><td>1:30 – 3:00</td><td>Nap / quiet rest</td></tr>
-         <tr><td>3:00 – 3:30</td><td>Wake up &amp; afternoon snack</td></tr>
-         <tr><td>3:30 – 4:30</td><td>Choice time &amp; free play centers</td></tr>
-         <tr><td>4:30 – 5:15</td><td>Structured fine-motor &amp; thinking games</td></tr>
-         <tr><td>5:15 – 6:00</td><td>Outdoor/quiet play &amp; dismissals</td></tr>
-        </tbody>
-       </table>
-      </div>
-
-      <div class="card">
-       <h3>🚌 ZAZU Classroom: After-Care Program (Ages 6 &amp; Up)</h3>
-       <p>
-        Our Zazu after-care classroom gives school-age children a safe place to relax, finish homework,
-        and explore interests through clubs, projects, and play after the school day ends.
-       </p>
-       <h4>Daily Schedule (3:00 p.m. – 6:00 p.m.)</h4>
-       <table class="schedule-table">
-        <tbody>
-         <tr><th>Time</th><th>Activity</th></tr>
-         <tr><td>3:00 – 3:30</td><td>Arrival, check-in, snack &amp; decompression</td></tr>
-         <tr><td>3:30 – 4:30</td><td>Choice time: homework help, reading, Maker Space, games</td></tr>
-         <tr><td>4:30 – 5:15</td><td>Group projects, clubs &amp; enrichment (STEM, art, leadership, etc.)</td></tr>
-         <tr><td>5:15 – 6:00</td><td>Outdoor play or indoor games &amp; pick-up</td></tr>
-        </tbody>
-       </table>
-      </div>
-     </div>
-    </div>
-
-    <!-- Gallery & Calendar Page -->
-    <div id="gallery" class="page">
-      <div class="page-header">
-        <h2 class="page-title">Our Pride, Our Families &amp; Our Year 📸</h2>
-        <p class="page-subtitle">School calendar &amp; a peek into life at Hakuna Matatah.</p>
-      </div>
-
-      <div class="card">
-        <h3>📅 2025–2026 School Calendar Highlights</h3>
         <div class="grid">
-          <div style="background:#fff3cd;padding:20px;border-radius:10px;border:1px solid #ffeaa7;">
-            <h4>🎉 Important Dates</h4>
-            <ul>
-              <li><strong>Aug 20, 2025:</strong> Parent Meeting</li>
-              <li><strong>Aug 25 – Sept (Fall Reset):</strong> Classroom prep &amp; reset</li>
-              <li><strong>Sept 2, 2025 (Tue):</strong> Welcome Back</li>
-              <li><strong>June 15, 2026:</strong> Summer Session Starts</li>
-            </ul>
+          <div class="card director-card">
+            <h3>🌟 Meet Our Director</h3>
+            <div class="director-photo">
+              <img src="Stefanie.png" alt="Director Stefanie Boyd">
+            </div>
+            <h4 id="director-name">Stefanie D. Boyd</h4>
+            <p id="director-bio">
+              Ms. Stefanie has a strong passion for early childhood education and community.
+              She leads Hakuna Matatah with a focus on family partnerships, hands-on learning,
+              and creating a safe space where every child feels seen, loved, and ready to explore.
+            </p>
           </div>
-          <div style="background:#f8d7da;padding:20px;border-radius:10px;border:1px solid #f5c6cb;">
-            <h4>🚫 Closures &amp; Breaks</h4>
+
+          <div class="card">
+            <h3>🏫 Our Center</h3>
+            <div class="school-photo">
+              <img src="School.png" alt="Hakuna Matatah Preschool &amp; Childcare building">
+            </div>
+            <p>
+              Located in Redford, Michigan, Hakuna Matatah Preschool &amp; Childcare Center
+              offers bright, engaging classrooms and a secure outdoor play yard. Our jungle-inspired
+              environment is filled with books, blocks, art, music, and opportunities to explore.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>💬 What Our Families Say</h3>
+
+          <div class="testimonial">
+            <p>
+              “My child LOVES coming to Hakuna Matatah! The teachers are patient, understanding,
+              and they treat us like family. I’ve seen so much growth in language and confidence.”
+            </p>
+            <div class="testimonial-author">– Hakuna Matatah Parent</div>
+          </div>
+
+          <div class="testimonial">
+            <p>
+              “From the warm greeting at the door to the fun activities and updates throughout the day,
+              I always feel my child is safe and learning something new.”
+            </p>
+            <div class="testimonial-author">– Hakuna Matatah Parent</div>
+          </div>
+
+          <div class="testimonial">
+            <p>
+              “The staff genuinely care about the kids. I love the balance of structure, play,
+              and hands-on learning. It’s the perfect fit for our family.”
+            </p>
+            <div class="testimonial-author">– Hakuna Matatah Parent</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Enrollment Page -->
+      <div id="enrollment" class="page">
+        <div class="page-header">
+          <h2 class="page-title">Join Our Hakuna Matatah Family 🦁</h2>
+          <p class="page-subtitle">Start your child’s learning adventure with us.</p>
+        </div>
+
+        <div class="card">
+          <h3>📋 Enrollment Information</h3>
+          <p>
+            We’re excited that you’re considering Hakuna Matatah Preschool &amp; Childcare Center!
+            Our enrollment process is family-friendly, and we’re happy to walk you through each step.
+          </p>
+
+          <!-- Direct download of your real PDF packet -->
+          <a href="Hakuna-Matatah-Enrollment-Packet (1).pdf" class="download-link" download>
+            📥 Download Our Full Enrollment Packet (PDF)
+          </a>
+
+          <h4>🔄 Enrollment Process</h4>
+          <ol style="font-size:15px; line-height:1.6;">
+            <li><strong>Schedule a Tour:</strong> Visit our center, see the classrooms, and meet the teachers.</li>
+            <li><strong>Review the Packet:</strong> Look over policies, required forms, and tuition information.</li>
+            <li><strong>Complete Paperwork:</strong> Return all enrollment forms and health documents.</li>
+            <li><strong>Family Orientation:</strong> Meet your child’s teacher and review routines together.</li>
+            <li><strong>First Day of Care:</strong> Your child begins their Hakuna Matatah journey!</li>
+          </ol>
+
+          <h4>💰 Tuition &amp; Fees (Sample Overview)</h4>
+          <p style="font-size:14px; margin-top:0;">
+            Please see the PDF packet for the most current rates, discounts, and program options.
+          </p>
+
+          <div class="grid">
+            <div style="background:#f1f8e9;padding:18px;border-radius:12px;border-left:5px solid var(--jungle-orange);">
+              <h5>🍼 Infant Program</h5>
+              <p>Full-time care with nurturing routines, bottles, naps, and sensory play.</p>
+            </div>
+            <div style="background:#f1f8e9;padding:18px;border-radius:12px;border-left:5px solid var(--jungle-orange);">
+              <h5>🧸 Toddler Program</h5>
+              <p>Hands-on exploration, early language, and support for potty training.</p>
+            </div>
+            <div style="background:#f1f8e9;padding:18px;border-radius:12px;border-left:5px solid var(--jungle-orange);">
+              <h5>🎨 Preschool Program</h5>
+              <p>Play-based learning that builds early literacy, math, and social-emotional skills.</p>
+            </div>
+            <div style="background:#f1f8e9;padding:18px;border-radius:12px;border-left:5px solid var(--jungle-orange);">
+              <h5>🏃 School-Age / Aftercare</h5>
+              <p>Homework help, enrichment clubs, and safe care before &amp; after school.</p>
+            </div>
+          </div>
+
+          <div style="background:#fff3cd;padding:18px;border-radius:12px;border:1px solid #ffeaa7;margin-top:16px;font-size:14px;">
+            <h5>💡 Helpful Notes</h5>
             <ul>
-              <li><strong>Nov 27–28, 2025:</strong> Thanksgiving Break</li>
-              <li><strong>Dec 23, 2025:</strong> Last Day Before Break</li>
-              <li><strong>Dec 25, 2025 – Jan 3, 2026:</strong> Winter Break</li>
-              <li><strong>Jan 1–2, 2026:</strong> New Year’s Holiday</li>
-              <li><strong>Jan 19, 2026 (Mon):</strong> MLK Day</li>
-              <li><strong>Apr 3, 2026 (Fri):</strong> Good Friday</li>
-              <li><strong>Apr 6, 2026 (Mon):</strong> Easter Monday</li>
-              <li><strong>May 25, 2026 (Mon):</strong> Memorial Day</li>
+              <li>Sibling discounts and limited financial assistance options may be available.</li>
+              <li>Meals and snacks are included for most full-day programs.</li>
+              <li>Please bring current immunization records and any health care plans.</li>
             </ul>
           </div>
         </div>
       </div>
 
-      <div class="card">
-        <h3>📸 Center &amp; Classroom Moments</h3>
-        <p>Real moments from our Hakuna Matatah family — learning, laughing, and growing together.</p>
+      <!-- Staff Page -->
+      <div id="staff" class="page">
+        <div class="page-header">
+          <h2 class="page-title">Meet Our Pride 🐾</h2>
+          <p class="page-subtitle">A caring, qualified team supporting your child every step of the way.</p>
+        </div>
 
-        <div class="gallery-grid">
-          <!-- Aquarium field trip -->
-          <div class="gallery-item">
-            <div class="gallery-photo">
-              <img src="aquarium 1.jpeg" alt="Children exploring the aquarium bubble tunnel">
+        <div class="card">
+          <h3>✅ Our Qualifications</h3>
+          <div class="grid">
+            <div class="qualification-item">
+              <div class="qualification-icon">📜</div>
+              <div>
+                <h4>Licensed &amp; Certified</h4>
+                <p>All staff meet or exceed Michigan licensing requirements and training hours.</p>
+              </div>
             </div>
-            <h4>Under the Sea Adventure</h4>
-            <p>Our friends getting up close with the fish on an exciting aquarium field trip.</p>
+
+            <div class="qualification-item">
+              <div class="qualification-icon">🔍</div>
+              <div>
+                <h4>Background Checked</h4>
+                <p>Comprehensive background screenings are completed for every team member.</p>
+              </div>
+            </div>
+
+            <div class="qualification-item">
+              <div class="qualification-icon">🚑</div>
+              <div>
+                <h4>CPR &amp; First Aid</h4>
+                <p>Staff maintain current CPR, First Aid, and emergency preparedness training.</p>
+              </div>
+            </div>
+
+            <div class="qualification-item">
+              <div class="qualification-icon">📚</div>
+              <div>
+                <h4>Ongoing Training</h4>
+                <p>We participate in regular professional development on child development and best practice.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>👨‍👩‍👧‍👦 Our Teaching Team</h3>
+
+          <div class="staff-grid">
+            <div class="staff-member">
+              <div class="staff-photo">
+                <img src="Stefanie.png" alt="Director Stefanie Boyd">
+              </div>
+              <h4>Stefanie D. Boyd</h4>
+              <p><strong>Center Director</strong></p>
+              <p>Leads the center with a heart for families, strong routines, and high-quality care.</p>
+            </div>
+
+            <div class="staff-member">
+              <div class="staff-photo">
+                <img src="Kathy.png" alt="Teacher Kathy B.">
+              </div>
+              <h4>Kathy B.</h4>
+              <p><strong>Toddler Lead Teacher</strong></p>
+              <p>Known for her patience and creativity with busy toddlers and young learners.</p>
+            </div>
+
+            <div class="staff-member">
+              <div class="staff-photo">
+                <img src="Keir.png" alt="Teacher Keir W.">
+              </div>
+              <h4>Keir W.</h4>
+              <p><strong>Preschool Lead Teacher</strong></p>
+              <p>Builds school-readiness through play, projects, and child-led exploration.</p>
+            </div>
+
+            <div class="staff-member">
+              <div class="staff-photo">
+                <img src="Kennedy.png" alt="Teacher Kennedy W.">
+              </div>
+              <h4>Kennedy W.</h4>
+              <p><strong>Infant Lead Teacher</strong></p>
+              <p>Specializes in gentle, responsive care for our youngest learners.</p>
+            </div>
+
+            <div class="staff-member">
+              <div class="staff-photo">
+                <img src="Heaven.png" alt="Teacher Heaven">
+              </div>
+              <h4>Heaven</h4>
+              <p><strong>Infant Room Co-Teacher</strong></p>
+              <p>Supports feeding, soothing, and play in the infant room with a warm smile.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Classrooms Page -->
+      <div id="classrooms" class="page">
+        <div class="page-header">
+          <h2 class="page-title">Our Learning Adventures! 🎨</h2>
+          <p class="page-subtitle">Discover our age-appropriate programs and curricula.</p>
+        </div>
+
+        <div class="grid">
+          <!-- Infant Program -->
+          <div class="card">
+            <h3>🍼 Infant Program (6 weeks - 12 months)</h3>
+            <h4>Daily Schedule:</h4>
+            <table class="schedule-table">
+              <tbody>
+                <tr>
+                  <th>Time</th>
+                  <th>Activity</th>
+                </tr>
+                <tr>
+                  <td>5:00 AM – 7:00 AM</td>
+                  <td>Arrival, Snuggles &amp; Quiet Free Play</td>
+                </tr>
+                <tr>
+                  <td>7:00 AM – 8:00 AM</td>
+                  <td>Breakfast / Bottles</td>
+                </tr>
+                <tr>
+                  <td>8:00 AM – 9:00 AM</td>
+                  <td>Tummy Time &amp; Sensory Play</td>
+                </tr>
+                <tr>
+                  <td>9:00 AM – 10:30 AM</td>
+                  <td>Morning Naps (individual schedules)</td>
+                </tr>
+                <tr>
+                  <td>10:30 AM – 11:30 AM</td>
+                  <td>Music, Stories &amp; Floor Time</td>
+                </tr>
+                <tr>
+                  <td>11:30 AM – 12:30 PM</td>
+                  <td>Lunch / Bottles</td>
+                </tr>
+                <tr>
+                  <td>12:30 PM – 2:30 PM</td>
+                  <td>Afternoon Naps</td>
+                </tr>
+                <tr>
+                  <td>2:30 PM – 3:30 PM</td>
+                  <td>Snack / Bottles &amp; Gentle Play</td>
+                </tr>
+                <tr>
+                  <td>3:30 PM – 5:00 PM</td>
+                  <td>Outdoor Time or Stroller Walks (weather permitting)</td>
+                </tr>
+                <tr>
+                  <td>5:00 PM – 6:00 PM</td>
+                  <td>Evening Snuggles, Soft Play &amp; Departure</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h4>Curriculum Highlights:</h4>
+            <ul>
+              <li>Responsive caregiving focused on trust and attachment.</li>
+              <li>Sensory exploration (textures, sounds, colors, lights).</li>
+              <li>Language development through songs, talking, and books.</li>
+              <li>Support for rolling, sitting, crawling, and early standing.</li>
+              <li>Individualized feeding and sleep routines for each child.</li>
+            </ul>
           </div>
 
-          <!-- Eric robot / STEM -->
-          <div class="gallery-item">
-            <div class="gallery-photo">
-              <img src="eric robot.jpeg" alt="Child building with STEM robot pieces at the table">
-            </div>
-            <h4>STEM &amp; Building</h4>
-            <p>Hands-on STEM play builds fine-motor skills, problem-solving, and creativity.</p>
+          <!-- Toddler Program -->
+          <div class="card">
+            <h3>🧸 Toddler Program (12 months - 2 years)</h3>
+            <h4>Daily Schedule:</h4>
+            <table class="schedule-table">
+              <tbody>
+                <tr>
+                  <th>Time</th>
+                  <th>Activity</th>
+                </tr>
+                <tr>
+                  <td>5:00 AM – 7:30 AM</td>
+                  <td>Arrival &amp; Free Choice Centers</td>
+                </tr>
+                <tr>
+                  <td>7:30 AM – 8:30 AM</td>
+                  <td>Breakfast</td>
+                </tr>
+                <tr>
+                  <td>8:30 AM – 9:00 AM</td>
+                  <td>Morning Circle (songs, weather, feelings)</td>
+                </tr>
+                <tr>
+                  <td>9:00 AM – 10:00 AM</td>
+                  <td>Art &amp; Sensory (paint, playdough, water play)</td>
+                </tr>
+                <tr>
+                  <td>10:00 AM – 11:00 AM</td>
+                  <td>Outdoor Play / Gross Motor</td>
+                </tr>
+                <tr>
+                  <td>11:00 AM – 11:30 AM</td>
+                  <td>Story Time &amp; Music</td>
+                </tr>
+                <tr>
+                  <td>11:30 AM – 12:15 PM</td>
+                  <td>Lunch</td>
+                </tr>
+                <tr>
+                  <td>12:15 PM – 2:15 PM</td>
+                  <td>Nap / Rest Time</td>
+                </tr>
+                <tr>
+                  <td>2:15 PM – 2:45 PM</td>
+                  <td>Snack</td>
+                </tr>
+                <tr>
+                  <td>2:45 PM – 4:30 PM</td>
+                  <td>Learning Centers &amp; Small Groups</td>
+                </tr>
+                <tr>
+                  <td>4:30 PM – 6:00 PM</td>
+                  <td>Indoor / Outdoor Free Play &amp; Departure</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h4>Curriculum Highlights:</h4>
+            <ul>
+              <li>Language building (labeling, repeating, simple phrases).</li>
+              <li>Social skills: sharing, turn-taking, and gentle hands.</li>
+              <li>Fine- and gross-motor activities (climbers, push toys, art).</li>
+              <li>Introduction to simple routines &amp; classroom jobs.</li>
+              <li>Support for potty training when children are ready.</li>
+            </ul>
           </div>
 
-          <!-- Lunch time -->
-          <div class="gallery-item">
-            <div class="gallery-photo">
-              <img src="Lunch.jpeg" alt="Toddlers enjoying a family-style meal at the table">
-            </div>
-            <h4>Family-Style Meals</h4>
-            <p>Sharing meals together while practicing manners, independence, and trying new foods.</p>
+          <!-- Preschool Program -->
+          <div class="card">
+            <h3>🎨 Preschool Program (3 - 5 years)</h3>
+            <h4>Daily Schedule:</h4>
+            <table class="schedule-table">
+              <tbody>
+                <tr>
+                  <th>Time</th>
+                  <th>Activity</th>
+                </tr>
+                <tr>
+                  <td>5:00 AM – 7:30 AM</td>
+                  <td>Arrival, Breakfast &amp; Quiet Centers</td>
+                </tr>
+                <tr>
+                  <td>7:30 AM – 8:00 AM</td>
+                  <td>Morning Meeting (calendar, weather, theme)</td>
+                </tr>
+                <tr>
+                  <td>8:00 AM – 9:30 AM</td>
+                  <td>Learning Centers (literacy, math, science, art)</td>
+                </tr>
+                <tr>
+                  <td>9:30 AM – 10:30 AM</td>
+                  <td>Outdoor Adventures / Gross Motor</td>
+                </tr>
+                <tr>
+                  <td>10:30 AM – 11:30 AM</td>
+                  <td>Small Group STEAM Activities</td>
+                </tr>
+                <tr>
+                  <td>11:30 AM – 12:15 PM</td>
+                  <td>Lunch</td>
+                </tr>
+                <tr>
+                  <td>12:15 PM – 1:30 PM</td>
+                  <td>Rest / Quiet Time</td>
+                </tr>
+                <tr>
+                  <td>1:30 PM – 2:00 PM</td>
+                  <td>Snack &amp; Read Aloud</td>
+                </tr>
+                <tr>
+                  <td>2:00 PM – 3:30 PM</td>
+                  <td>Project Work, Centers &amp; Music &amp; Movement</td>
+                </tr>
+                <tr>
+                  <td>3:30 PM – 6:00 PM</td>
+                  <td>Afternoon Outdoor Play &amp; Departure</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h4>Curriculum Highlights:</h4>
+            <ul>
+              <li>Pre-reading and pre-writing skills (letters, names, stories).</li>
+              <li>Hands-on math (counting, shapes, patterns, measuring).</li>
+              <li>STEAM projects that match children’s interests.</li>
+              <li>Social-emotional learning and problem solving.</li>
+              <li>Kindergarten readiness in a play-based environment.</li>
+            </ul>
           </div>
 
-          <!-- Magnet tiles tower -->
-          <div class="gallery-item">
-            <div class="gallery-photo">
-              <img src="magnet tiles.jpeg" alt="Children building a tall magnet-tile tower">
+          <!-- After School Care -->
+          <div class="card">
+            <h3>🏃 After School &amp; School-Age Care (5 - 12 years)</h3>
+            <h4>Typical Afternoon Schedule:</h4>
+            <table class="schedule-table">
+              <tbody>
+                <tr>
+                  <th>Time</th>
+                  <th>Activity</th>
+                </tr>
+                <tr>
+                  <td>3:00 PM – 3:30 PM</td>
+                  <td>Arrival &amp; Snack</td>
+                </tr>
+                <tr>
+                  <td>3:30 PM – 4:15 PM</td>
+                  <td>Homework Help / Reading Time</td>
+                </tr>
+                <tr>
+                  <td>4:15 PM – 5:00 PM</td>
+                  <td>Outdoor Play / Sports &amp; Gross Motor</td>
+                </tr>
+                <tr>
+                  <td>5:00 PM – 5:30 PM</td>
+                  <td>Enrichment Clubs (STEM, art, games, cooking, leadership)</td>
+                </tr>
+                <tr>
+                  <td>5:30 PM – 6:00 PM</td>
+                  <td>Choice Centers &amp; Departure</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h4>Curriculum Highlights:</h4>
+            <ul>
+              <li>Homework support and quiet study space.</li>
+              <li>Leadership, teamwork, and character-building activities.</li>
+              <li>STEM projects, board games, art, and maker challenges.</li>
+              <li>Outdoor play and physical fitness to release energy.</li>
+              <li>Community-building with mixed-age friendships.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gallery & Calendar Page -->
+      <div id="gallery" class="page">
+        <div class="page-header">
+          <h2 class="page-title">Our Pride, Our Families &amp; Our Year 📸</h2>
+          <p class="page-subtitle">School calendar &amp; a peek into life at Hakuna Matatah.</p>
+        </div>
+
+        <div class="card">
+          <h3>📅 2025–2026 School Calendar Highlights</h3>
+          <div class="grid">
+            <div style="background:#fff3cd;padding:20px;border-radius:10px;border:1px solid #ffeaa7;">
+              <h4>🎉 Important Dates</h4>
+              <ul>
+                <li><strong>Aug 20, 2025:</strong> Parent Meeting</li>
+                <li><strong>Aug 25 – Sept (Fall Reset):</strong> Classroom prep &amp; reset</li>
+                <li><strong>Sept 2, 2025 (Tue):</strong> Welcome Back</li>
+                <li><strong>June 15, 2026:</strong> Summer Session Starts</li>
+              </ul>
             </div>
-            <h4>Magnet Tile Architects</h4>
-            <p>Teamwork and imagination at work with our giant magnet-tile skyscrapers.</p>
+            <div style="background:#f8d7da;padding:20px;border-radius:10px;border:1px solid #f5c6cb;">
+              <h4>🚫 Closures &amp; Breaks</h4>
+              <ul>
+                <li><strong>Nov 27–28, 2025:</strong> Thanksgiving Break</li>
+                <li><strong>Dec 23, 2025:</strong> Last Day Before Break</li>
+                <li><strong>Dec 25, 2025 – Jan 3, 2026:</strong> Winter Break</li>
+                <li><strong>Jan 1–2, 2026:</strong> New Year’s Holiday</li>
+                <li><strong>Jan 19, 2026 (Mon):</strong> MLK Day</li>
+                <li><strong>Apr 3, 2026 (Fri):</strong> Good Friday</li>
+                <li><strong>Apr 6, 2026 (Mon):</strong> Easter Monday</li>
+                <li><strong>May 25, 2026 (Mon):</strong> Memorial Day</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>📸 Center &amp; Classroom Moments</h3>
+          <p>Real moments from our Hakuna Matatah family — learning, laughing, and growing together.</p>
+
+          <div class="gallery-grid">
+            <!-- Aquarium field trip -->
+            <div class="gallery-item">
+              <div class="gallery-photo">
+                <img src="aquarium 1.jpeg" alt="Children exploring the aquarium bubble tunnel">
+              </div>
+              <h4>Under the Sea Adventure</h4>
+              <p>Our friends getting up close with the fish on an exciting aquarium field trip.</p>
+            </div>
+
+            <!-- Eric robot / STEM -->
+            <div class="gallery-item">
+              <div class="gallery-photo">
+                <img src="eric robot.jpeg" alt="Child building with STEM robot pieces at the table">
+              </div>
+              <h4>STEM &amp; Building</h4>
+              <p>Hands-on STEM play builds fine-motor skills, problem-solving, and creativity.</p>
+            </div>
+
+            <!-- Lunch time -->
+            <div class="gallery-item">
+              <div class="gallery-photo">
+                <img src="Lunch.jpeg" alt="Toddlers enjoying a family-style meal at the table">
+              </div>
+              <h4>Family-Style Meals</h4>
+              <p>Sharing meals together while practicing manners, independence, and trying new foods.</p>
+            </div>
+
+            <!-- Magnet tiles tower -->
+            <div class="gallery-item">
+              <div class="gallery-photo">
+                <img src="magnet tiles.jpeg" alt="Children building a tall magnet-tile tower">
+              </div>
+              <h4>Magnet Tile Architects</h4>
+              <p>Teamwork and imagination at work with our giant magnet-tile skyscrapers.</p>
+            </div>
+
+            <!-- Micah puzzle / literacy -->
+            <div class="gallery-item">
+              <div class="gallery-photo">
+                <img src="micah puzzle.jpeg" alt="Child smiling while working on an alphabet puzzle">
+              </div>
+              <h4>Alphabet Fun</h4>
+              <p>Learning letters through puzzles, games, and lots of smiles.</p>
+            </div>
+
+            <!-- Painting with Ms. Kathy -->
+            <div class="gallery-item">
+              <div class="gallery-photo">
+                <img src="painting.jpeg" alt="Teacher helping children paint on canvases">
+              </div>
+              <h4>Little Artists at Work</h4>
+              <p>Painting, creating, and expressing big ideas with brushes and colors.</p>
+            </div>
+
+            <!-- Lego table -->
+            <div class="gallery-item">
+              <div class="gallery-photo">
+                <img src="legos.jpeg" alt="Group of children building with colorful Lego blocks">
+              </div>
+              <h4>Building Together</h4>
+              <p>Open-ended Lego play that strengthens fine-motor skills and cooperation.</p>
+            </div>
+
+            <!-- Riding bikes outside -->
+            <div class="gallery-item">
+              <div class="gallery-photo">
+                <img src="ridings.jpeg" alt="Child riding a pink bike with training wheels outside">
+              </div>
+              <h4>Outdoor Gross Motor Play</h4>
+              <p>Fresh air, bikes, and big body movements to build strength and confidence.</p>
+            </div>
+
+            <!-- Math / manipulatives table -->
+            <div class="gallery-item">
+              <div class="gallery-photo">
+                <img src="math.jpeg" alt="Children using colorful manipulatives at the table">
+              </div>
+              <h4>Early Math &amp; Thinking Skills</h4>
+              <p>Counting, sorting, and creating with math manipulatives during small-group time.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Page -->
+      <div id="contact" class="page">
+        <div class="page-header">
+          <h2 class="page-title">Get In Touch! 📞</h2>
+          <p class="page-subtitle">We’d love to answer your questions and schedule a tour.</p>
+        </div>
+
+        <div class="grid">
+          <div class="card">
+            <h3>📍 Contact Information</h3>
+            <div style="font-size: 15px; line-height: 1.8;">
+              <p><strong>📞 Phone:</strong> <span id="phone-number">(313) 694-3140</span></p>
+              <p><strong>📧 Email:</strong> <span id="email-address">info@hakunamatatpreschool.com</span></p>
+              <p><strong>📍 Address:</strong> <span id="address">26140 W 7 Mile Road, Redford, MI 48240</span></p>
+              <p><strong>🕒 Hours:</strong> Monday – Friday, 5:00 AM – 6:00 PM</p>
+            </div>
+
+            <div style="margin-top: 26px;">
+              <h4>🗺️ Find Us</h4>
+              <div style="width: 100%; height: 200px; background: linear-gradient(45deg,#4caf50,#8bc34a,#ffb300); border-radius: 18px; display: flex; align-items: center; justify-content: center; font-size: 46px; box-shadow:0 6px 16px rgba(0,0,0,0.35);">
+                🗺️🏫
+              </div>
+            </div>
           </div>
 
-          <!-- Micah puzzle / literacy -->
-          <div class="gallery-item">
-            <div class="gallery-photo">
-              <img src="micah puzzle.jpeg" alt="Child smiling while working on an alphabet puzzle">
+          <div class="card">
+            <h3>🏫 Schedule a Tour</h3>
+            <p>We’d love to show you our classrooms and talk about how we can support your child and family.</p>
+
+            <form id="tour-form" onsubmit="submitTourRequest(event)">
+              <div class="form-group">
+                <label for="parent-name">Parent/Guardian Name:</label>
+                <input type="text" id="parent-name" name="parent-name" required>
+              </div>
+              <div class="form-group">
+                <label for="child-name">Child's Name:</label>
+                <input type="text" id="child-name" name="child-name" required>
+              </div>
+              <div class="form-group">
+                <label for="child-age">Child's Age:</label>
+                <select id="child-age" name="child-age" required>
+                  <option value="">Select Age</option>
+                  <option value="infant">6 weeks - 12 months</option>
+                  <option value="toddler">12 months - 2 years</option>
+                  <option value="preschool">3-5 years</option>
+                  <option value="aftercare">5-12 years</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="tour-date">Preferred Tour Date:</label>
+                <input type="date" id="tour-date" name="tour-date" required>
+              </div>
+              <div class="form-group">
+                <label for="tour-time">Preferred Time:</label>
+                <select id="tour-time" name="tour-time" required>
+                  <option value="">Select Time</option>
+                  <option value="9:00 AM">9:00 AM</option>
+                  <option value="10:00 AM">10:00 AM</option>
+                  <option value="11:00 AM">11:00 AM</option>
+                  <option value="2:00 PM">2:00 PM</option>
+                  <option value="3:00 PM">3:00 PM</option>
+                  <option value="4:00 PM">4:00 PM</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="contact-phone">Phone Number:</label>
+                <input type="tel" id="contact-phone" name="contact-phone" required>
+              </div>
+              <div class="form-group">
+                <label for="contact-email">Email Address:</label>
+                <input type="email" id="contact-email" name="contact-email" required>
+              </div>
+              <button type="submit" class="btn">🏫 Schedule Tour</button>
+            </form>
+
+            <div id="tour-success" class="success-message">
+              Thank you! We’ve received your tour request and will contact you within 24 hours to confirm your appointment. We can’t wait to meet you and your little one! 🦁
             </div>
-            <h4>Alphabet Fun</h4>
-            <p>Learning letters through puzzles, games, and lots of smiles.</p>
           </div>
 
-          <!-- Painting with Ms. Kathy -->
-          <div class="gallery-item">
-            <div class="gallery-photo">
-              <img src="painting.jpeg" alt="Teacher helping children paint on canvases">
-            </div>
-            <h4>Little Artists at Work</h4>
-            <p>Painting, creating, and expressing big ideas with brushes and colors.</p>
-          </div>
+          <div class="card">
+            <h3>💬 Questions or Comments</h3>
+            <p>Have questions about our programs, tuition, or availability? Send us a message!</p>
 
-          <!-- Lego table -->
-          <div class="gallery-item">
-            <div class="gallery-photo">
-              <img src="legos.jpeg" alt="Group of children building with colorful Lego blocks">
-            </div>
-            <h4>Building Together</h4>
-            <p>Open-ended Lego play that strengthens fine-motor skills and cooperation.</p>
-          </div>
+            <form id="contact-form" onsubmit="submitContactForm(event)">
+              <div class="form-group">
+                <label for="contact-name">Your Name:</label>
+                <input type="text" id="contact-name" name="contact-name" required>
+              </div>
+              <div class="form-group">
+                <label for="contact-email-2">Email Address:</label>
+                <input type="email" id="contact-email-2" name="contact-email-2" required>
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject:</label>
+                <select id="subject" name="subject" required>
+                  <option value="">Select Subject</option>
+                  <option value="enrollment">Enrollment Information</option>
+                  <option value="programs">Program Questions</option>
+                  <option value="fees">Tuition &amp; Fees</option>
+                  <option value="feedback">Feedback</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Tell us how we can help you..." required></textarea>
+              </div>
+              <button type="submit" class="btn">📧 Send Message</button>
+            </form>
 
-          <!-- Riding bikes outside -->
-          <div class="gallery-item">
-            <div class="gallery-photo">
-              <img src="ridings.jpeg" alt="Child riding a pink bike with training wheels outside">
+            <div id="contact-success" class="success-message">
+              Thank you for your message! We’ll get back to you within 24 hours. Have a wonderful day! 🌟
             </div>
-            <h4>Outdoor Gross Motor Play</h4>
-            <p>Fresh air, bikes, and big body movements to build strength and confidence.</p>
-          </div>
-
-          <!-- Math / manipulatives table -->
-          <div class="gallery-item">
-            <div class="gallery-photo">
-              <img src="math.jpeg" alt="Children using colorful manipulatives at the table">
-            </div>
-            <h4>Early Math &amp; Thinking Skills</h4>
-            <p>Counting, sorting, and creating with math manipulatives during small-group time.</p>
           </div>
         </div>
       </div>
     </div>
-
-    <!-- Contact Page -->
-    <div id="contact" class="page">
-     <div class="page-header">
-      <h2 class="page-title">Get In Touch With Hakuna Matatah 📞</h2>
-      <p class="page-subtitle">We’re happy to answer questions or help you schedule a tour.</p>
-     </div>
-     <div class="grid">
-      <div class="card">
-       <h3>📍 Contact Information</h3>
-       <div style="font-size: 18px; line-height: 1.8;">
-        <p><strong>📞 Phone:</strong> <span id="phone-number">(313) 694-3140</span></p>
-        <p><strong>📧 Email:</strong> <span id="email-address">hakunamatatahchildcare@yahoo.com</span></p>
-        <p><strong>🌐 Website:</strong> <span>hakunamatatahchildcare.com</span></p>
-        <p><strong>📍 Address:</strong> <span id="address">26140 W 7 Mile Road, Redford, MI 48240</span></p>
-        <p><strong>🕒 Hours:</strong> Monday – Friday, 5:00 a.m. – 6:00 p.m.
-           <br><em>*Extended hours available – see Director*</em></p>
-       </div>
-       <div style="margin-top: 30px;">
-        <h4>🗺️ Find Us</h4>
-        <div style="width: 100%; height: 200px; border-radius: 15px; overflow:hidden;">
-         <img src="School.png" alt="Hakuna Matatah building front view" style="width:100%;height:100%;object-fit:cover;">
-        </div>
-       </div>
-      </div>
-      <div class="card">
-       <h3>🏫 Schedule a Tour</h3>
-       <p>
-        Come see our classrooms in person! Complete this quick form and our director
-        will contact you to confirm your visit.
-       </p>
-       <form id="tour-form" onsubmit="submitTourRequest(event)">
-        <div class="form-group">
-         <label for="parent-name">Parent/Guardian Name:</label>
-         <input type="text" id="parent-name" name="parent-name" required>
-        </div>
-        <div class="form-group">
-         <label for="child-name">Child's Name:</label>
-         <input type="text" id="child-name" name="child-name" required>
-        </div>
-        <div class="form-group">
-         <label for="child-age">Child's Age:</label>
-         <select id="child-age" name="child-age" required>
-          <option value="">Select Age</option>
-          <option value="infant">6 weeks - 12 months</option>
-          <option value="toddler">12 months - 2 years</option>
-          <option value="preschool">3-5 years</option>
-          <option value="aftercare">5-12 years</option>
-         </select>
-        </div>
-        <div class="form-group">
-         <label for="tour-date">Preferred Tour Date:</label>
-         <input type="date" id="tour-date" name="tour-date" required>
-        </div>
-        <div class="form-group">
-         <label for="tour-time">Preferred Time:</label>
-         <select id="tour-time" name="tour-time" required>
-          <option value="">Select Time</option>
-          <option value="9:00 AM">9:00 AM</option>
-          <option value="10:00 AM">10:00 AM</option>
-          <option value="11:00 AM">11:00 AM</option>
-          <option value="2:00 PM">2:00 PM</option>
-          <option value="3:00 PM">3:00 PM</option>
-          <option value="4:00 PM">4:00 PM</option>
-         </select>
-        </div>
-        <div class="form-group">
-         <label for="contact-phone">Phone Number:</label>
-         <input type="tel" id="contact-phone" name="contact-phone" required>
-        </div>
-        <div class="form-group">
-         <label for="contact-email">Email Address:</label>
-         <input type="email" id="contact-email" name="contact-email" required>
-        </div>
-        <button type="submit" class="btn">🏫 Schedule Tour</button>
-       </form>
-       <div id="tour-success" class="success-message">
-        Thank you! We've received your tour request and will contact you within 24 hours
-        to confirm your appointment. We can't wait to meet you and your little one! 🦁
-       </div>
-      </div>
-      <div class="card">
-       <h3>💬 Questions or Comments</h3>
-       <p>Have questions about programs, tuition, or availability? Send us a message.</p>
-       <form id="contact-form" onsubmit="submitContactForm(event)">
-        <div class="form-group">
-         <label for="contact-name">Your Name:</label>
-         <input type="text" id="contact-name" name="contact-name" required>
-        </div>
-        <div class="form-group">
-         <label for="contact-email-2">Email Address:</label>
-         <input type="email" id="contact-email-2" name="contact-email-2" required>
-        </div>
-        <div class="form-group">
-         <label for="subject">Subject:</label>
-         <select id="subject" name="subject" required>
-          <option value="">Select Subject</option>
-          <option value="enrollment">Enrollment Information</option>
-          <option value="programs">Program Questions</option>
-          <option value="fees">Tuition &amp; Fees</option>
-          <option value="feedback">Feedback</option>
-          <option value="other">Other</option>
-         </select>
-        </div>
-        <div class="form-group">
-         <label for="message">Message:</label>
-         <textarea id="message" name="message" placeholder="Tell us how we can help you..." required></textarea>
-        </div>
-        <button type="submit" class="btn">📧 Send Message</button>
-       </form>
-       <div id="contact-success" class="success-message">
-        Thank you for your message! We'll get back to you within 24 hours. Have a wonderful day! 🌟
-       </div>
-      </div>
-     </div>
-    </div>
-   </div>
   </main>
 
   <footer class="footer">
-   <div class="container">
-    <div class="footer-content">
-     <div class="footer-section">
-      <h4>🦁 Hakuna Matatah Preschool &amp; Childcare Center</h4>
-      <p>“Where Learning and Care Meet” — building future leaders through love, structure, and play.</p>
-     </div>
-     <div class="footer-section">
-      <h4>📞 Quick Contact</h4>
-      <p>
-       Phone: (313) 694-3140<br>
-       Email: hakunamatatahchildcare@yahoo.com
-      </p>
-     </div>
-     <div class="footer-section">
-      <h4>🕒 Hours</h4>
-      <p>
-       Monday – Friday<br>
-       5:00 a.m. – 6:00 p.m.<br>
-       <em>*Extended hours available – see Director*</em>
-      </p>
-     </div>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>🦁 Hakuna Matatah Preschool &amp; Childcare Center</h4>
+          <p>“Where Learning Feels Like Play!”</p>
+          <p>Serving infants, toddlers, preschoolers, and school-age children in Redford and surrounding areas.</p>
+        </div>
+        <div class="footer-section">
+          <h4>📞 Quick Contact</h4>
+          <p>Phone: (313) 694-3140</p>
+          <p>Email: info@hakunamatatpreschool.com</p>
+          <p>Address: 26140 W 7 Mile Road, Redford, MI 48240</p>
+        </div>
+        <div class="footer-section">
+          <h4>🕒 Center Hours</h4>
+          <p>Monday – Friday</p>
+          <p>5:00 AM – 6:00 PM</p>
+        </div>
+      </div>
+
+      <div style="border-top: 1px solid #33691e; padding-top: 14px; margin-top: 10px; font-size: 13px;">
+        <p>© 2024 Hakuna Matatah Preschool &amp; Childcare Center. All rights reserved. 🌿</p>
+      </div>
     </div>
-    <div style="border-top: 1px solid #4a7c59; padding-top: 20px; margin-top: 20px;">
-     <p>© 2025 Hakuna Matatah Preschool &amp; Childcare Center. All rights reserved. 🌿</p>
-    </div>
-   </div>
   </footer>
 
   <script>
-        const defaultConfig = {
-            school_name: "Hakuna Matatah Preschool & Childcare Center",
-            tagline: "“Where Learning and Care Meet”",
-            director_name: "Stefanie Boyd",
-            director_bio: "Stefanie has been in childcare for over 20 years and opened Hakuna Matatah in 2015. She is dedicated to providing a safe, nurturing, high-quality program for every child.",
-            phone_number: "(313) 694-3140",
-            email_address: "hakunamatatahchildcare@yahoo.com",
-            address: "26140 W 7 Mile Road, Redford, MI 48240"
-        };
+    // Navigation
+    function showPage(pageId, button) {
+      const pages = document.querySelectorAll('.page');
+      pages.forEach(page => page.classList.remove('active'));
+      document.getElementById(pageId).classList.add('active');
 
-        function showPage(pageId) {
-            const pages = document.querySelectorAll('.page');
-            pages.forEach(page => page.classList.remove('active'));
-            document.getElementById(pageId).classList.add('active');
+      const navButtons = document.querySelectorAll('.nav-btn');
+      navButtons.forEach(btn => btn.classList.remove('active'));
+      if (button) button.classList.add('active');
+    }
 
-            const navButtons = document.querySelectorAll('.nav-btn');
-            navButtons.forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
-        }
+    // Simple "submitted" messages
+    function submitTourRequest(event) {
+      event.preventDefault();
+      document.getElementById('tour-success').style.display = 'block';
+      document.getElementById('tour-form').reset();
+      document.getElementById('tour-success').scrollIntoView({ behavior: 'smooth' });
+    }
 
-        function downloadEnrollmentPacket() {
-            window.location.href = 'Hakuna-Matatah-Enrollment-Packet.pdf';
-        }
+    function submitContactForm(event) {
+      event.preventDefault();
+      document.getElementById('contact-success').style.display = 'block';
+      document.getElementById('contact-form').reset();
+      document.getElementById('contact-success').scrollIntoView({ behavior: 'smooth' });
+    }
 
-        function submitTourRequest(event) {
-            event.preventDefault();
-            document.getElementById('tour-success').style.display = 'block';
-            document.getElementById('tour-form').reset();
-            document.getElementById('tour-success').scrollIntoView({ behavior: 'smooth' });
-        }
+    // Element SDK config (optional editor support)
+    const defaultConfig = {
+      school_name: "Hakuna Matatah Preschool & Childcare Center",
+      tagline: "Where Learning Feels Like Play!",
+      director_name: "Stefanie D. Boyd",
+      director_bio: "Ms. Stefanie has a strong passion for early childhood education and community. She leads Hakuna Matatah with a focus on family partnerships, hands-on learning, and creating a safe space where every child feels seen, loved, and ready to explore.",
+      phone_number: "(313) 694-3140",
+      email_address: "info@hakunamatatpreschool.com",
+      address: "26140 W 7 Mile Road, Redford, MI 48240"
+    };
 
-        function submitContactForm(event) {
-            event.preventDefault();
-            document.getElementById('contact-success').style.display = 'block';
-            document.getElementById('contact-form').reset();
-            document.getElementById('contact-success').scrollIntoView({ behavior: 'smooth' });
-        }
+    async function onConfigChange(config) {
+      const schoolNameEl = document.getElementById('school-name');
+      if (schoolNameEl) schoolNameEl.textContent = config.school_name || defaultConfig.school_name;
 
-        async function onConfigChange(config) {
-            const schoolNameEl = document.getElementById('school-name');
-            if (schoolNameEl) {
-                schoolNameEl.textContent = config.school_name || defaultConfig.school_name;
-            }
+      const taglineEl = document.getElementById('tagline');
+      if (taglineEl) taglineEl.textContent = config.tagline || defaultConfig.tagline;
 
-            const taglineEl = document.getElementById('tagline');
-            if (taglineEl) {
-                taglineEl.textContent = config.tagline || defaultConfig.tagline;
-            }
+      const directorNameEl = document.getElementById('director-name');
+      if (directorNameEl) directorNameEl.textContent = config.director_name || defaultConfig.director_name;
 
-            const directorNameEl = document.getElementById('director-name');
-            if (directorNameEl) {
-                directorNameEl.textContent = config.director_name || defaultConfig.director_name;
-            }
+      const directorBioEl = document.getElementById('director-bio');
+      if (directorBioEl) directorBioEl.textContent = config.director_bio || defaultConfig.director_bio;
 
-            const directorBioEl = document.getElementById('director-bio');
-            if (directorBioEl) {
-                directorBioEl.textContent = config.director_bio || defaultConfig.director_bio;
-            }
+      const phoneEl = document.getElementById('phone-number');
+      if (phoneEl) phoneEl.textContent = config.phone_number || defaultConfig.phone_number;
 
-            const phoneEl = document.getElementById('phone-number');
-            if (phoneEl) {
-                phoneEl.textContent = config.phone_number || defaultConfig.phone_number;
-            }
+      const emailEl = document.getElementById('email-address');
+      if (emailEl) emailEl.textContent = config.email_address || defaultConfig.email_address;
 
-            const emailEl = document.getElementById('email-address');
-            if (emailEl) {
-                emailEl.textContent = config.email_address || defaultConfig.email_address;
-            }
+      const addressEl = document.getElementById('address');
+      if (addressEl) addressEl.textContent = config.address || defaultConfig.address;
+    }
 
-            const addressEl = document.getElementById('address');
-            if (addressEl) {
-                addressEl.textContent = config.address || defaultConfig.address;
-            }
-        }
+    function mapToCapabilities(config) {
+      return {
+        recolorables: [],
+        borderables: [],
+        fontEditable: undefined,
+        fontSizeable: undefined
+      };
+    }
 
-        function mapToCapabilities(config) {
-            return {
-                recolorables: [],
-                borderables: [],
-                fontEditable: undefined,
-                fontSizeable: undefined
-            };
-        }
+    function mapToEditPanelValues(config) {
+      return new Map([
+        ["school_name", config.school_name || defaultConfig.school_name],
+        ["tagline", config.tagline || defaultConfig.tagline],
+        ["director_name", config.director_name || defaultConfig.director_name],
+        ["director_bio", config.director_bio || defaultConfig.director_bio],
+        ["phone_number", config.phone_number || defaultConfig.phone_number],
+        ["email_address", config.email_address || defaultConfig.email_address],
+        ["address", config.address || defaultConfig.address]
+      ]);
+    }
 
-        function mapToEditPanelValues(config) {
-            return new Map([
-                ["school_name", config.school_name || defaultConfig.school_name],
-                ["tagline", config.tagline || defaultConfig.tagline],
-                ["director_name", config.director_name || defaultConfig.director_name],
-                ["director_bio", config.director_bio || defaultConfig.director_bio],
-                ["phone_number", config.phone_number || defaultConfig.phone_number],
-                ["email_address", config.email_address || defaultConfig.email_address],
-                ["address", config.address || defaultConfig.address]
-            ]);
-        }
-
-        if (window.elementSdk) {
-            window.elementSdk.init({
-                defaultConfig,
-                onConfigChange,
-                mapToCapabilities,
-                mapToEditPanelValues
-            });
-        }
-    </script>
-
-  <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'99dfaf3f24daca09',t:'MTc2MzA1MTc1MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
- </body>
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange,
+        mapToCapabilities,
+        mapToEditPanelValues
+      });
+    }
+  </script>
+</body>
 </html>
